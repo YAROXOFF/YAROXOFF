@@ -513,7 +513,7 @@ header .header nav {
     background-size: cover !important;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   header.header nav {
     display: flex;
     flex-direction: column;
@@ -536,8 +536,66 @@ header .header nav {
   header.header nav .auth-btn {
     align-self: flex-start; /* сдвигаем влево или вправо, в зависимости от нужного */
     margin-top: -10px;        /* поднимаем кнопку вверх */
-    margin-left: 40px;       /* сдвигаем вправо */
+   
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .header .logo {
+    order: -1; /* чтобы логотип был первым */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .header .logo img {
+    height: 48px;
+    margin: 0 auto;
+  }
+
+  .header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .auth-btn,
+  .btn-header {
+    width: 90%;
+    max-width: 220px;
+    text-align: center;
+    margin-top: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .auth-btn {
+    position: static !important;
+    margin: 10px auto 0;
+    display: block;
+    width: 90%;
+    max-width: 220px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 220px; /* или подбери по факту — может быть 140px, 180px */
   }
 }
 
 
+@media (max-width: 768px) {
+  .circle-player {
+    top: 500px; /* можно увеличить или уменьшить по факту */
+    left: 65%;  /* центрируем по ширине экрана */
+    transform: translateX(-50%);
+  }
+}
