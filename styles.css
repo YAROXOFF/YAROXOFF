@@ -438,14 +438,4 @@ header .header nav {
   background-color: #ff6700;
   color: #000;
 }
-@media (max-width: 768px) {
-  .feedback-section {
-    position: static;
-    width: 100%;
-    max-width: 100%;
-    margin: 40px auto 20px;
-    padding: 16px;
-    box-shadow: 0 0 10px rgba(255, 103, 0, 0.4);
-    border-radius: 12px;
-  }
-}
+
