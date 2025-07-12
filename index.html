@@ -435,5 +435,16 @@ audio.addEventListener('ended', () => {
   isPlaying = false;
   playIcon.src = 'https://cdn-icons-png.flaticon.com/512/727/727245.png';
 });</script>
+<script>
+  const toggleBtn = document.querySelector('.toggle-feedback-btn');
+  const feedbackSection = document.querySelector('.feedback-section');
+
+  toggleBtn.addEventListener('click', () => {
+    const isVisible = feedbackSection.classList.contains('visible');
+    feedbackSection.classList.toggle('visible');
+    feedbackSection.classList.toggle('hidden');
+    toggleBtn.textContent = isVisible ? 'Отзывы' : 'Скрыть отзывы';
+  });
+</script>
 </body>
 </html>
