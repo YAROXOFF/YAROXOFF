@@ -149,7 +149,7 @@
     </div>
 
     <header class="header">
-  <nav>
+  <nav class="header-buttons">
     <a href="auth.html" class="auth-btn">Вход / Регистрация</a>
     <a href="releases.html" class="btn-header">Все релизы</a>
     <a href="announcements.html" class="btn-header">Анонсы</a>
@@ -223,12 +223,8 @@
     </a>
 
   </div>
-
-  <footer>
-    &copy; 2025 YAROX. Все права защищены.
-  </footer>
 <!-- Контакты слева снизу -->
-<div style="position: fixed; left: 20px; bottom: 100px; background: #1f1f1f; padding: 15px 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(255, 103, 0, 0.4); font-size: 14px; color: #ff6700; z-index: 999; max-width: 240px;">
+<div class="collab-box">
   <!-- Почта как кнопка -->
   <div style="display: flex; align-items: center; margin-bottom: 12px; cursor: pointer;" onclick="copyEmail()">
     <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 24px; margin-right: 10px;" />
@@ -256,6 +252,10 @@
     });
   }
 </script>
+  <footer>
+    &copy; 2025 YAROX. Все права защищены.
+  </footer>
+
 <script>
   const form = document.getElementById('feedbackForm');
 const commentsList = document.getElementById('commentsList');
@@ -435,6 +435,16 @@ audio.addEventListener('ended', () => {
   isPlaying = false;
   playIcon.src = 'https://cdn-icons-png.flaticon.com/512/727/727245.png';
 });</script>
+<script>
+  const toggleBtn = document.querySelector('.toggle-feedback-btn');
+  const feedbackSection = document.querySelector('.feedback-section');
 
+  toggleBtn.addEventListener('click', () => {
+    const isVisible = feedbackSection.classList.contains('visible');
+    feedbackSection.classList.toggle('visible');
+    feedbackSection.classList.toggle('hidden');
+    toggleBtn.textContent = isVisible ? 'Отзывы' : 'Скрыть отзывы';
+  });
+</script>
 </body>
 </html>
